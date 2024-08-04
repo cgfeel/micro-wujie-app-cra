@@ -25,7 +25,7 @@ function render({ container = document }: CustomProps) {
   reportWebVitals();
 }
 
-// render({})
+// render({});
 
 if (window.__POWERED_BY_WUJIE__) {
   window.__WUJIE_MOUNT = () => render({});
