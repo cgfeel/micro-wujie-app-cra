@@ -25,14 +25,14 @@ function render({ container = document }: CustomProps) {
   reportWebVitals();
 }
 
-render({});
+// render({});
 
-// if (window.__POWERED_BY_WUJIE__) {
-//   window.__WUJIE_MOUNT = () => render({});
-//   window.__WUJIE_UNMOUNT = () => dom.root?.unmount();
-// } else {
-//   render({});
-// }
+if (window.__POWERED_BY_WUJIE__) {
+  window.__WUJIE_MOUNT = () => render({});
+  window.__WUJIE_UNMOUNT = () => dom.root?.unmount();
+} else {
+  render({});
+}
 
 interface CustomProps {
   container?: HTMLDivElement | Document;
