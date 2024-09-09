@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+
+const LazyCom = lazy(() => import("./com/LazyCom"));
 
 function App() {
   useEffect(() => {
@@ -32,6 +34,9 @@ function App() {
             click to emit
           </button>
         </p>
+        <Suspense fallback={null}>
+          <LazyCom />
+        </Suspense>
       </header>
     </div>
   );
