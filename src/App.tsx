@@ -9,6 +9,8 @@ function App() {
     window.$wujie?.bus.$on("react-page-bus-event", function (...args) {
       console.log("react-page-bus-event", args);
     });
+    // bug
+    // console.log(document.location.href, window.location.href);
   }, []);
   return (
     <div className="App">
